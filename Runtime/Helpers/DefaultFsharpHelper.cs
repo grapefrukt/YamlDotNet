@@ -77,7 +77,7 @@ namespace YamlDotNet.Helpers
                 .GetType("Microsoft.FSharp.Collections.ListModule")
                 .GetMethod("OfArray")
                 .MakeGenericMethod(itemsType)
-                .Invoke(null, [arr]);
+                .Invoke(null, new[] { arr });
 
             return fsharpList;
         }

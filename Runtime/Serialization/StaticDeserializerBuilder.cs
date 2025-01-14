@@ -70,7 +70,7 @@ namespace YamlDotNet.Serialization
         {
             this.context = context;
             factory = context.GetFactory();
-            typeMappings = [];
+            typeMappings = new Dictionary<Type, Type>();
 
             tagMappings = new Dictionary<TagName, Type>
             {
